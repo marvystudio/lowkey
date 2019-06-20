@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "ralemed";
+    src: url(../fonts/Raleway-Medium-vi.ttf);
+}
+@font-face {
+    font-family: "utmneu";
+    src: url(../fonts/UTMNeutra.ttf);
+}
+.title-wrapper{
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "ralemed";
+    font-size: 20px;
+}
+.title-wrapper span{
+    font-size: 15px;
+}

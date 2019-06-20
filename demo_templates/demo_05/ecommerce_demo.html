@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvy - Ecommerce Demo</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/demo.css">
+    <link rel="stylesheet" href="css/bootstrap-horizon.css">
+    <link rel="stylesheet" href="lib/fontawesome-free-5.1.0-web/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/css/flag-icon.css">
+    <link rel="stylesheet" href="lib/animate.css">
+    <link rel="stylesheet" href="lib/hamburgers.css">
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/demo.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script src="lib/wow.min.js"></script>
+    <script src="lib/parallax.js"></script>
+    <script src="lib/anime.js"></script>
+    <script type="module"
+            src="https://unpkg.com/@google/model-viewer@0.3.1/dist/model-viewer.js">
+    </script>
+
+    <script nomodule
+            src="https://unpkg.com/@google/model-viewer@0.3.1/dist/model-viewer-legacy.js">
+    </script>
+</head>
+<body style="overflow-x: hidden" ng-app="myApp">
+<div class="eco-side-nav">
+    <div class="eco-side-brand d-none d-lg-block">
+        <div>D</div>
+        <div>E</div>
+        <div>M</div>
+        <div>O</div>
+    </div>
+    <button class="hamburger hamburger--collapse burger-custom-wrapper"  id="toggle" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner burger-custom" style=""></span>
+      </span>
+    </button>
+    <div class="container-fluid eco-side-nav-content">
+        <div class="row">
+            <div class="col-lg-5 offset-1">
+                <div class="eco-side-nav-content-left">
+                    <div>
+                        <a href="#">Home</a>
+                    </div>
+                    <div>
+                        <a href="#">Browse</a>
+                    </div>
+                    <div>
+                        <a href="#">Blog</a>
+                    </div>
+                    <div>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 order-first order-lg-last mt-5">
+                <input type="text" placeholder="Search" class="eco-side-nav-search">
+            </div>
+        </div>
+        <div class="row" style="position: absolute; bottom: 10px; text-align: center ;width: 100%">
+            <div class="col-12" style="font-family: utmneu; color:white; text-align: center">
+                Designed By Marvy
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid" ng-controller="widthCtrl" >
+    <div class="eco-nike" >
+        <span id="N" >N</span><span id="i">i</span><span id="k">k</span><span id="e">e</span>
+    </div>
+    <div class="row" style="margin-top: 100px">
+
+        <div class="eco-airforce" >
+            Air force
+        </div>
+        <div class="col-lg-10 offset-lg-2 ">
+            <div class="row "  style="{{takewidth>576?'background-color: #5028ff; height: 200px;':''}} " >
+                <div class="col-md-5 eco-top-name-wrapper test" style="width: 0px;  background-color: #5028ff; height: 200px; margin-left: 100%; ">
+                    <div class="eco-top-name-brand">
+                        Nike
+                    </div>
+                    <div class="eco-top-name-product">
+                        air force
+                    </div>
+                    <div class="eco-top-bottom-wrapper">
+                        <div class="eco-top-rate">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="eco-top-price">
+                            $100.0 <span><button class="btn btn-buy">BUY NOW</button>  </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 order-first order-md-last test2 d-none d-sm-block {{takewidth>576?'position-absolute ':''}} justify-content-center"   style=" width: 0px;  margin-left: 100%; ">
+                    <img class="eco-top-pic img-fluid d-block ml-auto mr-auto" style="transform: translateX(0px)" src="images/kisspng-nike-free-air-force-shoe-sneakers-nike-shoes-transparent-background-5a7931690711e9.802116171517891945029.png" />
+                </div>
+                <div class="col-md-7 order-first order-md-last d-block d-sm-none" >
+                    <img class="eco-top-pic img-fluid d-block ml-auto mr-auto" style="transform: translateX(0px)" src="images/kisspng-nike-free-air-force-shoe-sneakers-nike-shoes-transparent-background-5a7931690711e9.802116171517891945029.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="container" ng-controller="widthCtrl">
+    <div class="row" style="margin-top: 250px; height: auto">
+        <div class="col-12 text-center mb-5">
+            <div style="font-family: utmneu; font-size: 40px;" >Most Popular</div>
+            <div style="font-family: ralemed; font-size: 20px">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+
+            </div>
+        </div>
+
+        <div class="card-columns eco-product-wrapper {{takewidth>769?'is-large':''}} ">
+            <div class="card eco-product-box">
+                <div class="eco-product-overlay">
+                    <p class="card-tex eco-product-name">Shoe's Name</p>
+                    <div class="eco-top-rate text-center" style="color: white">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div align="center">
+                        <button class="btn btn-bestseller" style="margin-top: 20px">BUY NOW</button>
+                    </div>
+                </div>
+                <div class="card-body eco-product-content" style=" ">
+                    <img src="images/kisspng-wrestling-shoe-sneakers-skate-shoe-adidas-adidas-response-3-1-wrestling-shoes-black-silver-b-5b67152b691901.9478734115334822834305.png"
+                         class="img-fluid d-block ml-auto mr-auto"/>
+                </div>
+            </div>
+            <div class="card eco-product-box">
+                <div class="eco-product-overlay">
+                    <p class="card-tex eco-product-name">Shoe's Name</p>
+                    <div class="eco-top-rate text-center" style="color: white">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div align="center">
+                        <button class="btn btn-bestseller" style="margin-top: 20px">BUY NOW</button>
+                    </div>
+                </div>
+                <div class="card-body eco-product-content" style=" ">
+                    <img src="images/kisspng-wrestling-shoe-sneakers-skate-shoe-adidas-adidas-response-3-1-wrestling-shoes-black-silver-b-5b67152b691901.9478734115334822834305.png"
+                         class="img-fluid d-block ml-auto mr-auto"/>
+                </div>
+            </div>
+            <div class="card eco-product-box">
+                <div class="eco-product-overlay">
+                    <p class="card-tex eco-product-name">Shoe's Name</p>
+                    <div class="eco-top-rate text-center" style="color: white">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div align="center">
+                        <button class="btn btn-bestseller" style="margin-top: 20px">BUY NOW</button>
+                    </div>
+                </div>
+                <div class="card-body eco-product-content" style=" ">
+                    <img src="images/kisspng-wrestling-shoe-sneakers-skate-shoe-adidas-adidas-response-3-1-wrestling-shoes-black-silver-b-5b67152b691901.9478734115334822834305.png"
+                         class="img-fluid d-block ml-auto mr-auto"/>
+                </div>
+            </div>
+            <div class="card eco-product-box" style="  {{takewidth>769?'margin-top: 100px':''}}">
+                <div class="eco-product-overlay">
+                    <p class="card-tex eco-product-name">Shoe's Name</p>
+                    <div class="eco-top-rate text-center" style="color: white">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div align="center">
+                        <button class="btn btn-bestseller" style="margin-top: 20px">BUY NOW</button>
+                    </div>
+                </div>
+                <div class="card-body eco-product-content" style=" ">
+                    <img src="images/kisspng-wrestling-shoe-sneakers-skate-shoe-adidas-adidas-response-3-1-wrestling-shoes-black-silver-b-5b67152b691901.9478734115334822834305.png"
+                         class="img-fluid d-block ml-auto mr-auto"/>
+                </div>
+            </div>
+            <div class="card ">
+                    <div class="eco-browse-all">
+                        <div class="eco-window-tint">
+                            <div class="eco-promo-text">
+                                SHOES
+                                <div>
+                                    <button class="btn btn-browse">Browse all</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="card eco-product-box">
+                <div class="eco-product-overlay">
+                    <p class="card-tex eco-product-name">Shoe's Name</p>
+                    <div class="eco-top-rate text-center" style="color: white">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div align="center">
+                        <button class="btn btn-bestseller" style="margin-top: 20px">BUY NOW</button>
+                    </div>
+                </div>
+                <div class="card-body eco-product-content" style=" ">
+                    <img src="images/kisspng-wrestling-shoe-sneakers-skate-shoe-adidas-adidas-response-3-1-wrestling-shoes-black-silver-b-5b67152b691901.9478734115334822834305.png"
+                         class="img-fluid d-block ml-auto mr-auto" />
+                </div>
+            </div>
+            <div class="card eco-product-box">
+                <div class="eco-product-overlay">
+                    <p class="card-tex eco-product-name">Shoe's Name</p>
+                    <div class="eco-top-rate text-center" style="color: white">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div align="center">
+                        <button class="btn btn-bestseller" style="margin-top: 20px">BUY NOW</button>
+                    </div>
+                </div>
+                <div class="card-body eco-product-content" style=" ">
+                    <img src="images/kisspng-wrestling-shoe-sneakers-skate-shoe-adidas-adidas-response-3-1-wrestling-shoes-black-silver-b-5b67152b691901.9478734115334822834305.png"
+                         class="img-fluid d-block ml-auto mr-auto"/>
+                </div>
+            </div>
+            <div class="card eco-product-box">
+                <div class="eco-product-overlay">
+                    <p class="card-tex eco-product-name">Shoe's Name</p>
+                    <div class="eco-top-rate text-center" style="color: white">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div align="center">
+                        <button class="btn btn-bestseller" style="margin-top: 20px">BUY NOW</button>
+                    </div>
+                </div>
+                <div class="card-body eco-product-content" style=" ">
+                    <img src="images/kisspng-wrestling-shoe-sneakers-skate-shoe-adidas-adidas-response-3-1-wrestling-shoes-black-silver-b-5b67152b691901.9478734115334822834305.png"
+                         class="img-fluid d-block ml-auto mr-auto"/>
+                </div>
+            </div>
+            <div class="card eco-product-box">
+                <div class="eco-product-overlay">
+                    <p class="card-tex eco-product-name">Shoe's Name</p>
+                    <div class="eco-top-rate text-center" style="color: white">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div align="center">
+                        <button class="btn btn-bestseller" style="margin-top: 20px">BUY NOW</button>
+                    </div>
+                </div>
+                <div class="card-body eco-product-content" style=" ">
+                    <img src="images/kisspng-wrestling-shoe-sneakers-skate-shoe-adidas-adidas-response-3-1-wrestling-shoes-black-silver-b-5b67152b691901.9478734115334822834305.png"
+                         class="img-fluid d-block ml-auto mr-auto"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-7" style="background-color: #eeeeee">
+            <img src="images/kisspng-wrestling-shoe-sneakers-skate-shoe-adidas-adidas-response-3-1-wrestling-shoes-black-silver-b-5b67152b691901.9478734115334822834305.png"
+                 class="img-fluid d-block ml-auto mr-auto"/>
+        </div>
+        <div class="col-lg-5 eco-bestseller-wrapper order-first order-sm-last" style=" {{takewidth>1024?'transform: translate(-100px, -100px);':''}} " >
+            <div class="eco-bestseller-name-brand">
+                Addidas
+            </div>
+            <div class="eco-bestseller-name-product">
+                Mat Wizard 2
+            </div>
+            <div class="eco-bestseller-name-des">
+                Lorem ipsum dolor sit am et, consectetur a
+                dipiscing elit, sed do eiusmod tempor inc
+                didunt ut labore et dolore ma gna aliqua.
+                <div>
+                    <button class="btn btn-bestseller">BUY NOW</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="eco-blog-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 d-none d-lg-block" style="position: relative">
+                <div class="eco-blog" >
+                    <div id="read-the">
+                        Read the
+                    </div>
+                    <div id="blog">
+                         blog
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 d-block d-lg-none">
+                <div class="eco-blog-mobile">
+                    Read the Blog
+                </div>
+            </div>
+            <div class="col-lg-4 ">
+                <div class="eco-blog-pic" style="background: url(images/air-jordan-6-infrared-wallpaper-hd.jpg) center" ></div>
+                <div class="eco-blog-content">
+                    <div class="eco-blog-article">
+                        Win A Pair of the No Vacancy Inn "Water & WiFi" New Balance 990s
+                    </div>
+                    <div class="eco-blog-desc">
+                        We've decided to keep the wave going with No Vacancy Inn with an exclusive giveaway of their "Water & WiFi" New Balance 990s on our StockX Sneakers Instagram.
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="eco-blog-pic" style="background: url(images/air-jordan-6-infrared-wallpaper-hd.jpg) center" ></div>
+                <div class="eco-blog-content">
+                    <div class="eco-blog-article">
+                        Win A Pair of the No Vacancy Inn "Water & WiFi" New Balance 990s
+                    </div>
+                    <div class="eco-blog-desc">
+                        We've decided to keep the wave going with No Vacancy Inn with an exclusive giveaway of their "Water & WiFi" New Balance 990s on our StockX Sneakers Instagram.
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="eco-blog-pic" style="background: url(images/air-jordan-6-infrared-wallpaper-hd.jpg) center" ></div>
+                <div class="eco-blog-content">
+                    <div class="eco-blog-article">
+                        Win A Pair of the No Vacancy Inn "Water & WiFi" New Balance 990s
+                    </div>
+                    <div class="eco-blog-desc">
+                        We've decided to keep the wave going with No Vacancy Inn with an exclusive giveaway of their "Water & WiFi" New Balance 990s on our StockX Sneakers Instagram.
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="eco-blog-pic" style="background: url(images/air-jordan-6-infrared-wallpaper-hd.jpg) center" ></div>
+                <div class="eco-blog-content">
+                    <div class="eco-blog-article">
+                        Win A Pair of the No Vacancy Inn "Water & WiFi" New Balance 990s
+                    </div>
+                    <div class="eco-blog-desc">
+                        We've decided to keep the wave going with No Vacancy Inn with an exclusive giveaway of their "Water & WiFi" New Balance 990s on our StockX Sneakers Instagram.
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="eco-blog-pic" style="background: url(images/air-jordan-6-infrared-wallpaper-hd.jpg) center" ></div>
+                <div class="eco-blog-content">
+                    <div class="eco-blog-article">
+                        Win A Pair of the No Vacancy Inn "Water & WiFi" New Balance 990s
+                    </div>
+                    <div class="eco-blog-desc">
+                        We've decided to keep the wave going with No Vacancy Inn with an exclusive giveaway of their "Water & WiFi" New Balance 990s on our StockX Sneakers Instagram.
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="eco-blog-pic" style="background: url(images/air-jordan-6-infrared-wallpaper-hd.jpg) center" ></div>
+                <div class="eco-blog-content">
+                    <div class="eco-blog-article">
+                        Win A Pair of the No Vacancy Inn "Water & WiFi" New Balance 990s
+                    </div>
+                    <div class="eco-blog-desc">
+                        We've decided to keep the wave going with No Vacancy Inn with an exclusive giveaway of their "Water & WiFi" New Balance 990s on our StockX Sneakers Instagram.
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="eco-blog-pic" style="background: url(images/air-jordan-6-infrared-wallpaper-hd.jpg) center" ></div>
+                <div class="eco-blog-content">
+                    <div class="eco-blog-article">
+                        Win A Pair of the No Vacancy Inn "Water & WiFi" New Balance 990s
+                    </div>
+                    <div class="eco-blog-desc">
+                        We've decided to keep the wave going with No Vacancy Inn with an exclusive giveaway of their "Water & WiFi" New Balance 990s on our StockX Sneakers Instagram.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('widthCtrl', function($scope) {
+        var width=$( window ).width();
+        $scope.takewidth = width;
+    });
+    $( "#toggle" ).click(function() {
+        $( "#toggle" ).toggleClass('is-active');
+        $( ".eco-side-nav" ).toggleClass('eco-side-nav-active');
+        $( ".eco-side-nav-content" ).toggleClass("eco-side-nav-content-active");
+        $( ".burger-custom" ).toggleClass("burger-custom-active");
+    });
+    anime({
+        targets: '#read-the',
+        translateX: 10,
+        delay:200,
+        endDelay: 200,
+        easing: 'easeInOutQuad',
+        direction: 'alternate',
+        loop:true
+    });
+    anime({
+        targets: '#blog',
+        translateX: 10,
+        delay:400,
+        endDelay: 400,
+        easing: 'easeInOutQuad',
+        direction: 'alternate',
+        loop:true
+    });
+    anime({
+        targets: '.test',
+        width: '100%',
+        marginLeft:'0%',
+        easing: 'easeInOutQuad',
+        direction: 'alternate',
+        loop: false
+    });
+
+    anime({
+        targets: '.test2',
+        width: '100%',
+        delay: 600,
+        marginLeft:'40%',
+        easing: 'spring(1, 50, 20, 5)',
+        direction: 'alternate',
+        loop: false
+    });
+</script>

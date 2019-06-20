@@ -1,0 +1,491 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/demo.css">
+    <link rel="stylesheet" href="css/bootstrap-horizon.css">
+    <link rel="stylesheet" href="lib/fontawesome-free-5.1.0-web/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/css/flag-icon.css">
+    <link rel="stylesheet" href="lib/animate.css">
+    <link rel="stylesheet" href="lib/hamburgers.css">
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/demo.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script src="lib/wow.min.js"></script>
+    <script src="lib/parallax.js"></script>
+    <script src="lib/anime.js"></script>
+    <script src="lib/jquery.scrollify.js"></script>
+    <script src="lib/particles.js"></script>
+    <script type="module"
+            src="https://unpkg.com/@google/model-viewer@0.3.1/dist/model-viewer.js">
+    </script>
+
+    <script nomodule
+            src="https://unpkg.com/@google/model-viewer@0.3.1/dist/model-viewer-legacy.js">
+    </script>
+</head>
+<body>
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">Trang Chủ</a>
+    <a href="projects.html">Sản Phẩm</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Liên Hệ</a>
+</div>
+<div class="home-background">
+    <span onclick="openNav()" style="left: 20px; top: 10px; position: absolute; border-radius: 5px; padding: 5px 10px 5px 10px; border: solid medium black">
+        <i class="fas fa-bars fa-2x"></i>
+    </span>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-5 text-center home-top-wrapper d-none d-md-block">
+                <h1 class="home-top-title">
+                    Thiết Kế Web <br>Chuyên Nghiệp
+                </h1>
+                <h5>Chúng tôi đem lại giải pháp về website thân thiện người dùng, tương thích mọi thiết bị</h5>
+                <button class="contact-btn btn">Liên Hệ</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-5 text-center home-top-wrapper  d-block d-md-none">
+            <h1 class="home-top-title">
+                Thiết Kế Web Chuyên Nghiệp Đa Nền Tảng
+            </h1>
+            <h6>Chúng tôi đem lại giải pháp về website thân thiện người dùng, tương thích mọi thiết bị</h6>
+            <button class="contact-btn btn">Liên Hệ</button>
+        </div>
+    </div>
+</div>
+<div class="services-background">
+    <div class="text-center services-wrapper">
+        <h1 class="home-top-title">
+            Các Dịch Vụ Của Chúng Tôi
+        </h1>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <img src="images/103800-128.png" height="64" width="64"/>
+                <h3 class="services-name">Thiết Kế Website</h3>
+                <h6 class="services-desc">
+                    Tiêu chí thiết kế một website của chúng tôi là giao diện thân thiện, chuẩn SEO, tương thích đa nên tảng.
+                </h6>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="images/185046-128.png" height="64" width="64"/>
+                <h3 class="services-name">Thiết Kế Logo</h3>
+                <h6 class="services-desc">
+                    Logo là thứ định hình nên hình ảnh và thương hiệu của một doanh nghiệp, công ty. Hãy để đội ngũ designer của chúng tôi giúp bạn.
+                </h6>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="images/185097-128.png" height="64" width="64"/>
+                <h3 class="services-name">Hosting và Domain</h3>
+                <h6 class="services-desc">
+                    Bạn cần nơi lưu trữ và tên miền cho riêng mình? Chúng tôi có thể cung cấp dịch vụ đó với giá cạnh tranh.
+                </h6>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="services-background">
+    <div class="text-center services-wrapper">
+        <h1 class="home-top-title">
+            Về Chúng Tôi
+        </h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div>
+                    <h2>
+                       Chúng tôi tự hào là công ty tiên phong cho lĩnh vực thiết kế web đồ họa.
+                    </h2>
+                    <h6>
+                        Chúng tôi cam kết đem lại dịch vụ thiết kế web phù hợp với nhiều nhóm đối tượng với giá cả cạnh tranh, giao diện bắt mắt. Ngoài ra, cùng với <b>Marvy Studio</b>, chúng tôi sẽ là đơn vị tiên phong đem lại trải nghiệm <b>AR/XR, Interactive Web</b> chưa từng có đến cho người dùng Việt Nam.
+                    </h6>
+                </div>
+            </div>
+            <div class="col-lg-6 justify-content-center d-none d-md-flex">
+                <div class="layer-3d">
+                    <img src="images/layer-desktop.png" />
+                    <img src="images/layer-desktop.png" />
+                    <img src="images/layer-desktop.png" />
+                    <img src="images/layer-desktop.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="services-background">
+    <div class="text-center services-wrapper">
+        <h1 class="home-top-title">
+            Bảng Thông Tin Dịch Vụ
+        </h1>
+    </div>
+    <div class="container mt-5">
+        <div class="table-responsive">
+            <table class="table table-borderless price-table">
+                <tr>
+                    <th>
+
+                    </th>
+                    <th class="text-center">
+                        Cơ Bản<br>
+                        <span style="font-size: 30px">1.000.000VND</span>
+                    </th>
+                    <th class="text-center price-main">
+                        Phổ Thông<br>
+                        <span style="font-size: 30px">1.000.000VND</span>
+                    </th>
+                    <th class="text-center">
+                        Studio<br>
+                        <span style="font-size: 30px">1.000.000VND</span>
+                    </th>
+                </tr>
+                <tr>
+                    <td class="price-name">
+                        Bản Thiết Kế Website
+                    </td>
+                    <td class="text-center price-check main">
+                        X
+                    </td>
+                    <td class="text-center price-check main">
+                        X
+                    </td >
+                    <td class="text-center price-check main">
+                        X
+                    </td>
+                </tr>
+                <tr>
+                    <td class="price-name">
+                        Trang Admin
+                    </td>
+                    <td class="text-center price-check main">
+                        X
+                    </td>
+                    <td class="text-center price-check main">
+                        X
+                    </td>
+                    <td class="text-center price-check main">
+                        X
+                    </td>
+                </tr>
+                <tr>
+                    <td class="price-name">
+                        SSL
+                    </td>
+                    <td class="text-center price-check main">
+                        X
+                    </td>
+                    <td class="text-center price-check main">
+                        X
+                    </td >
+                    <td class="text-center price-check main">
+                        X
+                    </td>
+                </tr>
+                <tr>
+                    <td class="price-name">
+                        Responsive
+                    </td>
+                    <td class="text-center price-check main">
+                        X
+                    </td>
+                    <td class="text-center price-check main">
+                        X
+                    </td >
+                    <td class="text-center price-check main">
+                        X
+                    </td>
+                </tr>
+                <tr>
+                    <td class="price-name">
+                        Chuẩn SEO
+                    </td>
+                    <td class="text-center price-check main">
+                        X
+                    </td>
+                    <td class="text-center price-check main">
+                        X
+                    </td >
+                    <td class="text-center price-check main">
+                        X
+                    </td>
+                </tr>
+                <tr>
+                    <td class="price-name">
+                        Hổ Trợ Sự Cố (24/7)
+                    </td>
+                    <td class="text-center price-check main">
+                        X
+                    </td>
+                    <td class="text-center price-check main">
+                        X
+                    </td >
+                    <td class="text-center price-check main">
+                        X
+                    </td>
+                </tr>
+                <tr>
+                    <td class="price-name">
+                        Thiết Kế Logo
+                    </td>
+                    <td class="text-center price-check">
+                        X
+                    </td>
+                    <td class="text-center price-check main">
+                        X
+                    </td >
+                    <td class="text-center price-check main">
+                        X
+                    </td>
+                </tr>
+                <tr>
+                    <td class="price-name">
+                        Thiết Kế Theo Yêu Cầu
+                    </td>
+                    <td class="text-center price-check">
+                        X
+                    </td>
+                    <td class="text-center price-check main">
+                        X
+                    </td >
+                    <td class="text-center price-check main">
+                        X
+                    </td>
+                </tr>
+                <tr>
+                    <td class="price-name">
+                        Miễn Phí Một Ngôn Ngữ
+                    </td>
+                    <td class="text-center price-check">
+                        X
+                    </td>
+                    <td class="text-center price-check main">
+                        X
+                    </td >
+                    <td class="text-center price-check main">
+                        X
+                    </td>
+                </tr>
+                <tr>
+                    <td class="price-name">
+                        Hỗ Trợ Chatbot
+                    </td>
+                    <td class="text-center price-check">
+                        X
+                    </td>
+                    <td class="text-center price-check main">
+                        X
+                    </td >
+                    <td class="text-center price-check main">
+                        X
+                    </td>
+                </tr>
+                <tr>
+                    <td class="price-name">
+                        <img src="images/logomarvy_onwhite.png" width="20"/>
+                        Hỗ Trợ XR
+                    </td>
+                    <td class="text-center price-check">
+                        X
+                    </td>
+                    <td class="text-center price-check">
+                        X
+                    </td >
+                    <td class="text-center price-check main">
+                        X
+                    </td>
+                </tr>
+                <tr>
+                    <td class="price-name">
+                        <img src="images/logomarvy_onwhite.png" width="20"/>
+                        Hỗ Trợ AR
+                    </td>
+                    <td class="text-center price-check">
+                        X
+                    </td>
+                    <td class="text-center price-check">
+                        X
+                    </td >
+                    <td class="text-center price-check main">
+                        X
+                    </td>
+                </tr>
+                <tr>
+                    <td class="price-name">
+                        <img src="images/logomarvy_onwhite.png" width="20"/>
+                        Miễn Phí Một Card Visit (Có thể scan AR)
+                    </td>
+                    <td class="text-center price-check">
+                        X
+                    </td>
+                    <td class="text-center price-check">
+                        X
+                    </td >
+                    <td class="text-center price-check main">
+                        X
+                    </td>
+                </tr>
+                <tr>
+                    <td class="price-name">
+                        <img src="images/logomarvy_onwhite.png" width="20"/>
+                        Interactive Website
+                    </td>
+                    <td class="text-center price-check">
+                        X
+                    </td>
+                    <td class="text-center price-check">
+                        X
+                    </td >
+                    <td class="text-center price-check main">
+                        X
+                    </td>
+                </tr>
+                <tr>
+                    <td class="price-name">
+                    </td>
+                    <td class="text-center">
+                        <button class="contact-btn btn">Đăng Ký</button>
+                    </td>
+                    <td class="text-center">
+                        <button class="contact-btn btn">Đăng Ký</button>
+                    </td >
+                    <td class="text-center">
+                        <button class="contact-btn btn">Đăng Ký</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="services-wrapper">
+        <h1 class="text-center home-top-title">
+            Dịch Vụ Bổ Sung
+        </h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 offset-md-2" style="position: relative">
+                    <div class="bonus-services-header">
+                        Phổ Thông
+                    </div>
+                    <div class="bonus-services-body">
+                        <div class="bonus-services-wrapper  text-center">
+                            <span class="bonus-services-name">Thiết Kế Hình</span><br>
+                            <span class="bonus-services-price">100k - 200k / Tấm</span>
+                            <hr class="hr-custom">
+                        </div>
+                        <div class="bonus-services-wrapper  text-center">
+                            <span class="bonus-services-name">Thiết Kế Logo</span><br>
+                            <span class="bonus-services-price">300k / Logo</span>
+                            <hr class="hr-custom">
+                        </div>
+                        <div class="bonus-services-wrapper  text-center">
+                            <span class="bonus-services-name">Thiết Kế Banner</span><br>
+                            <span class="bonus-services-price">100k - 300k / Tấm</span>
+                            <hr class="hr-custom">
+                        </div>
+                        <div class="bonus-services-wrapper text-center">
+                            <span class="bonus-services-name">Thêm Ngôn Ngữ</span><br>
+                            <span class="bonus-services-price">200k / Ngôn Ngữ</span>
+                            <hr class="hr-custom">
+                        </div>
+                        <div class="bonus-services-wrapper text-center">
+                            <span class="bonus-services-name">Hỗ Trợ Nhập Liệu</span><br>
+                            <span class="bonus-services-price">300k / 15 Bài</span>
+                            <hr class="hr-custom">
+                        </div>
+                        <div class="bonus-services-wrapper text-center">
+                            <span class="bonus-services-name">Đổi Giao Diện</span><br>
+                            <span class="bonus-services-price">2000k</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 " style="position: relative">
+                    <div class="bonus-services-header" style="background-color: #5028ff; color: white">
+                        Studio
+                    </div>
+                    <div class="bonus-services-body">
+                        <div class="bonus-services-wrapper  text-center">
+                            <span class="bonus-services-name"><img src="images/logomarvy_onwhite.png" width="20"/> Thêm Hình 360</span><br>
+                            <span class="bonus-services-price">500k / Tấm</span>
+                            <hr class="hr-custom">
+                        </div>
+                        <div class="bonus-services-wrapper  text-center">
+                            <span class="bonus-services-name"><img src="images/logomarvy_onwhite.png" width="20"/> Hỗ Trợ AR</span><br>
+                            <span class="bonus-services-price">2000k</span>
+                            <hr class="hr-custom">
+                        </div>
+                        <div class="bonus-services-wrapper  text-center">
+                            <span class="bonus-services-name"><img src="images/logomarvy_onwhite.png" width="20"/> Hỗ Trợ XR</span><br>
+                            <span class="bonus-services-price">2000k</span>
+                            <hr class="hr-custom">
+                        </div>
+                        <div class="bonus-services-wrapper  text-center">
+                            <span class="bonus-services-name"><img src="images/logomarvy_onwhite.png" width="20"/> Thiết Kế Mô Hình 3D</span><br>
+                            <span class="bonus-services-price">500k / Mô Hình</span>
+                            <hr class="hr-custom">
+                        </div>
+                        <div class="bonus-services-wrapper  text-center">
+                            <span class="bonus-services-name"><img src="images/logomarvy_onwhite.png" width="20"/> Chụp Hình 360 Sản Phẩm</span><br>
+                            <span class="bonus-services-price">800k / Hình</span>
+                            <hr class="hr-custom">
+                        </div>
+                        <div class="bonus-services-wrapper  text-center">
+                            <span class="bonus-services-name"><img src="images/logomarvy_onwhite.png" width="20"/> Thiết Kế Card Visit AR</span><br>
+                            <span class="bonus-services-price">1000k / Thẻ</span>
+                            <hr class="hr-custom">
+                        </div>
+                        <div class="bonus-services-wrapper  text-center">
+                            <span class="bonus-services-name"><img src="images/logomarvy_onwhite.png" width="20"/> Thiết Kế Logo AR</span><br>
+                            <span class="bonus-services-price">1000k / Logo</span>
+                            <hr class="hr-custom">
+                        </div>
+                        <div class="bonus-services-wrapper text-center">
+                            <span class="bonus-services-name"><img src="images/logomarvy_onwhite.png" width="20"/> APP AR</span><br>
+                            <span class="bonus-services-price">Liên Hệ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="home-footer mt-5 p-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 style="color: white; font-family: harabara;">MARVY lite</h1>
+                <h5 style="color: white; font-family: harabara; opacity: 0.5">Liên Kết Với Marvy Studio</h5>
+                <h6 class="mt-5 mb-2" style="font-family: harabara;opacity: 0.5;color: white;">Theo Dõi Chúng Tôi</h6>
+                <span style="opacity: 0.5;color: white;">
+                    <i class="fab fa-facebook fa-2x fa-fw"></i>
+                    <i class="fab fa-instagram fa-2x fa-fw"></i>
+                    <i class="fab fa-google-plus fa-2x fa-fw"></i>
+                </span>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
+
