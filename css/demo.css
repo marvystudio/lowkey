@@ -485,6 +485,15 @@
         left: 35%;
 
     }
+    .project-title{
+        font-size: 40px;
+    }
+    .project-sub-title{
+        width: 90%;
+    }
+    .home-top-wrapper h1{
+        font-size: 40px;
+    }
 }
 @media only screen and (min-width:768px){
     .scroll-down{
