@@ -1,14 +1,6 @@
 @font-face {
-    font-family: "oswald";
-    src: url(../fonts/Oswald-Regular.ttf);
-}
-@font-face {
-    font-family: "oswaldB";
-    src: url(../fonts/Oswald-Bold.ttf);
-}
-@font-face {
-    font-family: "oswaldL";
-    src: url(../fonts/Oswald-Light.ttf);
+    font-family: "utmneu";
+    src: url(../fonts/UTMNeutra.ttf);
 }
 @font-face {
     font-family: "harabara";
@@ -48,11 +40,11 @@
 
 }
 .home-top-wrapper h1{
-    font-family: harabara;
-    font-size: 80px;
+    font-family: utmneu;
+    font-size: 70px;
 }
 .contact-btn{
-    border-radius: 15px;
+    border-radius: 10px;
     font-family: harabara;
     color: white;
     width: 200px;
@@ -466,7 +458,214 @@
     font-size: 60px;
     margin-top: 50px;
 }
+.detail-body{
+    background-color: #F8F8F8;
+    min-height: 100vh;
+}
+.detail-img{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.detail-info{
+    background-color: white;
+    padding: 20px 35px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.07);
+}
+.detail-form{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.detail-info h1{
+    font-family: utmneu;
+
+}
+.detail-tag{
+    border: solid thin rgba(64,58,156,1) ;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 5px;
+    transition: 0.1s;
+    cursor: pointer;
+    color: black;
+    text-decoration: none!important;
+    margin-right: 5px;
+    width: 100px;
+    white-space: nowrap;
+    margin-bottom: 10px!important;
+}
+.detail-tag:hover {
+    color: white;
+    border: solid thin rgba(64,58,156,1) ;
+    background-color:rgba(64,58,156,1);
+}
+.detail-price{
+    font-weight: bold;
+    margin-top: 10px;
+}
+.detail-btn{
+    background-color: rgba(64,58,156,1);
+    opacity: 0.8;
+    color: white;
+}
+.detail-send{
+    width: 100px;
+    font-size: 20px;
+}
+
+.detail-btn:hover{
+    opacity: 1;
+    color: white;
+}
+.detail-text-divider h6{
+    width: 50%;
+    color: #808285;
+}
+.detail-input{
+    border: none;
+    background: transparent;
+    border-bottom: solid thin #575756!important;
+    border-radius: 0px;
+    color: black;
+    transition: 0.3s;
+}
+.detail-input:focus{
+    background: transparent;
+    color: black;
+    border-bottom: solid medium rgba(64,58,156,1)!important;
+    outline-style: none;
+    box-shadow: none;
+}
+.detail-input::placeholder{
+    color: #575756;
+}
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    line-height: 20px;
+}
+.checkbox-container span{
+    font-size: 15px;
+    color: #cecece;
+}
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkbox-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+.checkbox-container:hover input ~ .checkbox-checkmark {
+    background-color: #ccc;
+}
+.checkbox-container input:checked ~ .checkbox-checkmark {
+    background-color: rgba(64,58,156,1);
+}
+.checkbox-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.checkbox-container input:checked ~ .checkbox-checkmark:after {
+    display: block;
+}
+.checkbox-container .checkbox-checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.radio-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.radio-container span{
+    font-size: 15px;
+    color: #cecece;
+}
+/* Hide the browser's default radio button */
+.radio-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.radio-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radio-container:hover input ~ .radio-checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-container input:checked ~ .radio-checkmark {
+    background-color:  rgba(64,58,156,1);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radio-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-container input:checked ~ .radio-checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio-container .radio-checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
 @media only screen and (max-width: 576px){
+    .detail-text-divider h6{
+        width: 100%;
+    }
     .layer-3d{
         width: 200px;
         height: 380px;
