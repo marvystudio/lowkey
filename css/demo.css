@@ -3,6 +3,10 @@
     src: url(../fonts/UTMNeutra.ttf);
 }
 @font-face {
+    font-family: "ralemed";
+    src: url(../fonts/Raleway-Medium-vi.ttf);
+}
+@font-face {
     font-family: "harabara";
     src: url(../fonts/Harabara.ttf);
 }
@@ -28,6 +32,43 @@
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(6,208,210,1);
 }
+.home-nav-btn{
+    left: 20px;
+    top: 10px;
+    position: absolute;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    color: white;
+    background-color:rgba(64,58,156,1) ;
+}
+.home-nav-wrapper{
+    z-index: 99;
+    display: inline-block;
+    margin-top: 40px;
+    font-size: 25px;
+    box-shadow: 20px 20px 0px 0px rgba(64,58,156,0.8);
+    background-color: white;
+    padding: 14px 0px;
+}
+.home-nav-wrapper a{
+    transition: 0.3s;
+    text-decoration: none;
+}
+.home-nav-wrapper a:not(:first-child):hover{
+    border-bottom: solid medium rgba(64,58,156,1);
+}
+.home-nav-wrapper a:first-child{
+    background-color:rgba(64,58,156,1) ;
+    padding: 15px 10px;
+    color: white;
+    font-family: utmneu;
+}
+.home-nav-wrapper a:not(:first-child){
+
+    color: black;
+    font-family: utmneu;
+    padding: 0px 15px;
+}
 .home-background{
     background: url(../images/Artboard1.png) center fixed;
     background-size: cover;
@@ -40,30 +81,50 @@
 
 }
 .home-top-wrapper h1{
-    font-family: utmneu;
-    font-size: 70px;
+     font-family: utmneu;
+     font-size: 70px;
+}
+.home-top-wrapper h5{
+    font-family: ralemed;
+}
+.home-top-wrapper h6{
+    font-family: ralemed;
+}
+.home-desc{
+    font-family: ralemed;
 }
 .contact-btn{
     border-radius: 10px;
-    font-family: harabara;
+    font-family: utmneu;
     color: white;
     width: 200px;
     font-size: 22px;
     background: linear-gradient(90deg, rgba(64,58,156,1) 19%, rgba(6,208,210,1) 100%);
 }
+.contact-btn:hover{
+    color: white;
+
+}
 .services-background{
-    padding: 50px;
+    padding: 50px 0px;
+
 }
 .services-wrapper{
     color: black;
 }
 .services-wrapper h1{
-    font-family: harabara;
+    font-family: utmneu;
     font-size: 40px;
 }
 .services-name{
     font-family: harabara;
     margin-top: 10px;
+}
+.custom-hr{
+    width: 100%;
+    border: 1px solid black;
+    margin-left: 0;
+    margin-top: 8px;
 }
 .services-desc{
     opacity: 0.5;
@@ -72,7 +133,6 @@
     font-size: 20px;
 }
 .price-main{
-    font-family: harabara;
     background: linear-gradient(90deg, rgba(64,58,156,1) 19%, rgba(6,208,210,1) 100%);
     color: white;
 }
@@ -169,6 +229,38 @@
     background-position:center;
     background-size:cover;
     background-attachment: fixed;
+}
+.para-home{
+    transform: translateY(-200px);
+}
+.custom-tab .nav-link.active, .custom-tab .nav-item.show .nav-link{
+    border-radius: 50%;
+    background-color: rgba(64,58,156,1);
+    color: white;
+}
+.custom-tab{
+    border: none;
+
+}
+.custom-tab .nav-link{
+    transform: scale(1.5);
+    margin-right: 30px;
+    border-radius: 50%;
+    background-color: #eeeeee;
+    color: black;
+    font-weight: bold;
+}
+.tab-content{
+    font-family: ralemed;
+}
+.home-price{
+    border-radius: 10px;
+    font-family: ralemed;
+}
+.home-price-columns{
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
 }
 .project-title{
     font-family: harabara;
@@ -662,7 +754,40 @@
     border-radius: 50%;
     background: white;
 }
+.detail-tab{
+    border-bottom:none;
+
+    font-size: 20px;
+}
+.detail-tab .nav-link.active, .detail-tab .nav-item.show .nav-link {
+    border: none !important;
+    font-weight: bold !important;
+    border-radius: 5px;
+    color: white !important;
+    background-color: rgba(64,58,156,1);
+
+}
+.detail-tab .nav-link{
+    color:black!important;
+    font-weight:bold;
+    padding: 5px 40px;
+    border: solid thin rgba(64,58,156,1);
+    transition:0.3s;
+    margin-right: 10px;
+}
+.detail-tab .nav-link:hover {
+    border:none;
+}
+.reading-content{
+    font-family: ralemed;
+    font-size: 20px;
+}
 @media only screen and (max-width: 576px){
+    .home-price-columns{
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
     .detail-text-divider h6{
         width: 100%;
     }
@@ -677,7 +802,7 @@
         margin-top: unset;
     }
     .home-top-wrapper h1{
-        font-family: harabara;
+        font-family: utmneu;
         font-size: 50px;
     }
     .scroll-down{
@@ -692,6 +817,9 @@
     }
     .home-top-wrapper h1{
         font-size: 40px;
+    }
+    .tab-content h1{
+        font-size: 20px;
     }
 }
 @media only screen and (min-width:768px){
