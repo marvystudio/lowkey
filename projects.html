@@ -29,6 +29,14 @@
     </script>
 </head>
 <body>
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">Trang Chủ</a>
+    <a href="projects.html">Sản Phẩm</a>
+    <a href="blog.html">Blog</a>
+    <a href="">Dịch Vụ</a>
+    <a href="contact.html">Liên Hệ</a>
+</div>
 
 <span onclick="openNav()" class="d-block d-md-none home-nav-btn" style="">
     <i class="fas fa-bars fa-2x"></i>
@@ -128,19 +136,7 @@
         </div>
     </div>
 </div>
-
-
-<div class="project-section" style="position: relative" >
-    <div  id="particles" style=" background-color: black; width: 100%; height: 100vh; position: absolute; z-index: -1 ">
-
-    </div>
-    <div style="padding-top: 200px">
-        <h1 class="welcome text-center">Welcome To</h1>
-        <img src="images/logomarvy_onblack.png" class="marvy" width="200"/>
-    </div>
-
-</div>
-<div class="project-section" style="background-color: black; padding: 10px 0px">
+<div class="project-section mt-5" style="background-color: black; padding: 10px 0px">
     <div class="text-right project-packs" style="color: white">
         Pro
     </div>
@@ -190,24 +186,15 @@
     </div>
 </div>
 </body>
-<footer class="home-footer mt-5 p-4">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h1 style="color: white; font-family: harabara;">MARVY lite</h1>
-                <h5 style="color: white; font-family: harabara; opacity: 0.5">Liên Kết Với Marvy Studio</h5>
-                <h6 class="mt-5 mb-2" style="font-family: harabara;opacity: 0.5;color: white;">Theo Dõi Chúng Tôi</h6>
-                <span style="opacity: 0.5;color: white;">
-                    <i class="fab fa-facebook fa-2x fa-fw"></i>
-                    <i class="fab fa-instagram fa-2x fa-fw"></i>
-                    <i class="fab fa-google-plus fa-2x fa-fw"></i>
-                </span>
-            </div>
-        </div>
-    </div>
-</footer>
 </html>
 <script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
     particlesJS.load('particles','particlesjs-config.json');
     (function() {
         // Init

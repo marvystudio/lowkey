@@ -29,6 +29,15 @@
     </script>
 </head>
 <body>
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">Trang Chủ</a>
+    <a href="projects.html">Sản Phẩm</a>
+    <a href="blog.html">Blog</a>
+    <a href="">Dịch Vụ</a>
+    <a href="contact.html">Liên Hệ</a>
+</div>
+
 <span onclick="openNav()" class="d-block d-md-none home-nav-btn" style="">
     <i class="fas fa-bars fa-2x"></i>
 </span>
@@ -75,14 +84,14 @@
                 <div class="col-12 news-content-main">
                     Tin Chính
                 </div>
-                <div class="col-md-8 ">
+                <div class="col-lg-8 col-md-6 ">
                     <div class="news-content news-content-main-background" style="background:linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ),url(images/daylight-environment-forest-459225.jpg) center;"></div>
                     <div class="news-content-title">
                         <a href="#">Layout là gì, cách dàn trang và sắp xếp bố cục trong thiết kế</a>
                     </div>
                     <div class="news-content-sub"><span style="color:black">Alex Holmes</span> - 4 hours ago</div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="news-content news-content-main-background" style="background:linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ),url(images/architecture-buildings-burj-khalifa-162031.jpg) center;"></div>
                     <div class="news-content-title">
                         <a href="#">Thiết kế phần mềm quản lý trường học, trung tâm anh văn</a>
@@ -91,7 +100,7 @@
                 </div>
             </div>
             <div class="row mb-md-5">
-                <div class="col-md-4 news-wrapper">
+                <div class="col-lg-4 col-md-6 news-wrapper">
                     <div class="news-content" style="background:linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ),url(images/arch-bridge-clouds-814499.jpg) center">
                         <div class="news-title-wrapper">
                             <a href="#">Chứng chỉ SSL là gì? Các loại SSL Certificate hiện nay</a>
@@ -99,7 +108,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 news-wrapper">
+                <div class="col-lg-4 col-md-6 news-wrapper">
                     <div class="news-content" style="background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ),url(images/clouds-cloudy-cold-2437295.jpg) center">
                         <div class="news-title-wrapper">
                             <a href="#">Hướng dẫn tích hợp Tawk.To vào website từ A đến Z</a>
@@ -107,7 +116,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 news-wrapper">
+                <div class="col-lg-4 col-md-6 news-wrapper">
                     <div class="news-content" style="background:linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ),url(images/fog-foggy-forest-4827.jpg) center">
                         <div class="news-title-wrapper">
                             <a href="#">Sitemap là gì? Cách tạo sitemap và khai báo với Google</a>
@@ -115,9 +124,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row mb-md-5">
-                <div class="col-md-4 news-wrapper">
+                <div class="col-lg-4  col-md-6 news-wrapper">
                     <div class="news-content" style="background:linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ),url(images/daylight-environment-forest-459225.jpg) center">
                         <div class="news-title-wrapper">
                             <a href="#">Opencart là gì? Opencart có gì nổi bật so với WordPress</a>
@@ -125,7 +132,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 news-wrapper">
+                <div class="col-lg-4 col-md-6 news-wrapper">
                     <div class="news-content" style="background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ),url(images/arch-bridge-clouds-814499.jpg) center">
                         <div class="news-title-wrapper">
                             <a href="#">Tổng hợp các phương pháp marketing online bạn nên biết</a>
@@ -133,7 +140,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 news-wrapper">
+                <div class="col-lg-4 col-md-6 news-wrapper">
                     <div class="news-content" style="background:linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ),url(images/architecture-buildings-burj-khalifa-162031.jpg) center">
                         <div class="news-title-wrapper">
                             <a href="#">Edutech là gì? Những kiến thức cần biết về edutech</a>
@@ -165,6 +172,13 @@
 </footer>
 </html>
 <script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
     var scene = document.getElementById('scene');
     anime({
         targets: ".scroll-down",
