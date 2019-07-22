@@ -95,7 +95,7 @@
     color: white;
     width: 200px;
     font-size: 22px;
-    background: linear-gradient(90deg, rgba(64,58,156,1) 19%, rgba(6,208,210,1) 100%);
+    background: linear-gradient(rgba(64,58,156,1) 20%, rgba(6,208,210,1) 100%);
 }
 .contact-btn:hover{
     color: white;
@@ -301,7 +301,7 @@
     font-weight: bold;
 }
 .project-cate-name{
-    font-size: 80px;
+    font-size: 70px;
     font-weight: bold;
     color: #f2f2f2;
     font-family: harabara;
