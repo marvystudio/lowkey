@@ -1,7 +1,4 @@
-@font-face {
-    font-family: "utmneu";
-    src: url(../fonts/UTMNeutra.ttf);
-}
+
 @font-face {
     font-family: "ralemed";
     src: url(../fonts/Raleway-Medium-vi.ttf);
@@ -61,27 +58,26 @@
     background-color:rgba(64,58,156,1) ;
     padding: 15px 10px;
     color: white;
-    font-family: utmneu;
+    font-family: harabara;
 }
 .home-nav-wrapper a:not(:first-child){
 
     color: black;
-    font-family: utmneu;
+    font-family: harabara;
     padding: 0px 15px;
 }
 .home-background{
-    background: url(../images/Artboard1.png) center fixed;
+    background: url(../images/Artboard1.png) center fixed repeat-y;
     background-size: cover;
     height: 100vh;
     position: relative;
-    background-repeat: repeat-y;
 }
 .home-top-wrapper{
     margin-top: 300px;
 
 }
 .home-top-wrapper h1{
-     font-family: utmneu;
+     font-family: harabara;
      font-size: 70px;
 }
 .home-top-wrapper h5{
@@ -95,11 +91,11 @@
 }
 .contact-btn{
     border-radius: 10px;
-    font-family: utmneu;
+    font-family: harabara;
     color: white;
     width: 200px;
     font-size: 22px;
-    background: linear-gradient(90deg, rgba(64,58,156,1) 19%, rgba(6,208,210,1) 100%);
+    background: linear-gradient(rgba(64,58,156,1) 20%, rgba(6,208,210,1) 100%);
 }
 .contact-btn:hover{
     color: white;
@@ -113,7 +109,7 @@
     color: black;
 }
 .services-wrapper h1{
-    font-family: utmneu;
+    font-family: harabara;
     font-size: 40px;
 }
 .services-name{
@@ -128,6 +124,7 @@
 }
 .services-desc{
     opacity: 0.5;
+    font-family: ralemed;
 }
 .price-table tr th{
     font-size: 20px;
@@ -197,6 +194,7 @@
     -webkit-box-shadow: 2px 0px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 2px 0px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 2px 0px 5px 0px rgba(0,0,0,0.75);
+    font-family: ralemed;
 }
 
 .sidenav a {
@@ -303,11 +301,10 @@
     font-weight: bold;
 }
 .project-cate-name{
-    font-size: 80px;
+    font-size: 70px;
     font-weight: bold;
     color: #f2f2f2;
     font-family: harabara;
-    opacity: 0.5;
 }
 .project-name-wrapper{
     line-height: 80px;
@@ -570,7 +567,7 @@
     border-top-right-radius: 20px;
 }
 .detail-info h1{
-    font-family: utmneu;
+    font-family: harabara;
 
 }
 .detail-tag{
@@ -802,7 +799,7 @@
         margin-top: unset;
     }
     .home-top-wrapper h1{
-        font-family: utmneu;
+        font-family: harabara;
         font-size: 50px;
     }
     .scroll-down{

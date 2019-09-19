@@ -29,6 +29,39 @@
     </script>
 </head>
 <body>
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">Trang Chủ</a>
+    <a href="projects.html">Sản Phẩm</a>
+    <a href="blog.html">Blog</a>
+    <a href="">Dịch Vụ</a>
+    <a href="contact.html">Liên Hệ</a>
+</div>
+
+<span onclick="openNav()" class="d-block d-md-none home-nav-btn" style="">
+    <i class="fas fa-bars fa-2x"></i>
+</span>
+<div class="container-fluid">
+    <div class="row d-none d-md-block">
+        <div class="home-nav-wrapper">
+            <a href="index.html">
+                Trang Chủ
+            </a>
+            <a href="projects.html">
+                Sản Phẩm
+            </a>
+            <a href="blog.html">
+                Blog
+            </a>
+            <a href="#">
+                Dịch Vụ
+            </a>
+            <a href="contact.html">
+                Liên Hệ
+            </a>
+        </div>
+    </div>
+</div>
 <div class="project-section overflow-hidden">
     <div class="para-container overflow-hidden" >
         <ul id="scene">
@@ -102,71 +135,67 @@
             </div>
         </div>
     </div>
-</div>
-
-
-<div class="project-section" style="position: relative" >
-    <div  id="particles" style=" background-color: black; width: 100%; height: 100vh; position: absolute; z-index: -1 ">
-
-    </div>
-    <div style="padding-top: 200px">
-        <h1 class="welcome text-center">Welcome To</h1>
-        <img src="images/logomarvy_onblack.png" class="marvy" width="200"/>
-    </div>
-
-</div>
-<div class="project-section" style="background-color: black; padding: 10px 0px">
-    <div class="text-right project-packs" style="color: white">
-        Pro
-    </div>
-    <div class="container">
-        <div class="row mt-5 marvy-row" >
-            <div class="col-md-6" style="border-right: solid medium white">
-                <img src="images/demo4.png"  width="90%"/>
-            </div>
-            <div class="col-md-6 project-name-wrapper">
-                <div class="project-name" style="color: white">
-                    Demo 04
-                </div>
-                <div class="project-cate-name">
-                    Service
-                </div>
-                <button class="btn marvy-btn">Xem Demo</button>
-            </div>
+    <div style="background-color: black;" class="p-5 mt-5">
+        <div class="text-right project-packs" style="color: white">
+            Pro
         </div>
-        <div class="row mt-5 marvy-row">
-            <div class="col-md-6" style="border-right: solid medium white">
-                <img src="images/demo5.png"  width="90%"/>
+        <div class="container">
+            <div class="row mt-5 marvy-row" >
+                <div class="col-md-6" style="border-right: solid medium white">
+                    <img src="images/demo4.png"  width="90%"/>
+                </div>
+                <div class="col-md-6 project-name-wrapper">
+                    <div class="project-name" style="color: white">
+                        Demo 04
+                    </div>
+                    <div class="project-cate-name">
+                        Service
+                    </div>
+                    <button class="btn marvy-btn">Xem Demo</button>
+                </div>
             </div>
-            <div class="col-md-6 project-name-wrapper">
-                <div class="project-name" style="color: white">
-                    Demo 05
+            <div class="row mt-5 marvy-row">
+                <div class="col-md-6" style="border-right: solid medium white">
+                    <img src="images/demo5.png"  width="90%"/>
                 </div>
-                <div class="project-cate-name">
-                    Interactive
+                <div class="col-md-6 project-name-wrapper">
+                    <div class="project-name" style="color: white">
+                        Demo 05
+                    </div>
+                    <div class="project-cate-name">
+                        Interactive
+                    </div>
+                    <button class="btn marvy-btn">Xem Demo</button>
                 </div>
-                <button class="btn marvy-btn">Xem Demo</button>
             </div>
-        </div>
-        <div class="row mt-5 marvy-row">
-            <div class="col-md-6" style="border-right: solid medium white">
-                <img src="images/demo6.png"  width="90%"/>
-            </div>
-            <div class="col-md-6 project-name-wrapper">
-                <div class="project-name" style="color: white">
-                    Demo 06
+            <div class="row mt-5 marvy-row">
+                <div class="col-md-6" style="border-right: solid medium white">
+                    <img src="images/demo6.png"  width="90%"/>
                 </div>
-                <div class="project-cate-name">
-                    Interactive
+                <div class="col-md-6 project-name-wrapper">
+                    <div class="project-name" style="color: white">
+                        Demo 06
+                    </div>
+                    <div class="project-cate-name">
+                        Interactive
+                    </div>
+                    <button class="btn marvy-btn">Xem Demo</button>
                 </div>
-                <button class="btn marvy-btn">Xem Demo</button>
             </div>
         </div>
     </div>
+
 </div>
 </body>
 </html>
 <script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
     particlesJS.load('particles','particlesjs-config.json');
     (function() {
         // Init
