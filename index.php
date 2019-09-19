@@ -38,7 +38,7 @@
 <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="#">Trang Chủ</a>
-    <a href="projects.html">Sản Phẩm</a>
+    <a href="projects.php">Sản Phẩm</a>
     <a href="blog.html">Blog</a>
     <a href="">Dịch Vụ</a>
     <a href="contact.html">Liên Hệ</a>
@@ -54,7 +54,7 @@
                 <a href="index.html">
                     Trang Chủ
                 </a>
-                <a href="projects.html">
+                <a href="projects.php">
                     Sản Phẩm
                 </a>
                 <a href="blog.html">
@@ -627,32 +627,7 @@
                 </div>
             </div>-->
         </div>
-        <div class="row mb-md-5">
-            <div class="col-md-4 news-wrapper">
-                <div class="news-content" style="background:linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ),url(images/daylight-environment-forest-459225.jpg) center">
-                    <div class="news-title-wrapper">
-                        <a href="#">Tin mới cập nhật về công nghệ xịn xò nhất thế giới nè. Do tui dễ thương quá mà</a>
-                        <div><span style="color:white">Alex Holmes</span> - 4 hours ago</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 news-wrapper">
-                <div class="news-content" style="background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ),url(images/arch-bridge-clouds-814499.jpg) center">
-                    <div class="news-title-wrapper">
-                        <a href="#">Tin mới cập nhật về công nghệ xịn xò nhất thế giới nè. Do tui dễ thương quá mà</a>
-                        <div><span style="color:white">Alex Holmes</span> - 4 hours ago</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 news-wrapper">
-                <div class="news-content" style="background:linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ),url(images/architecture-buildings-burj-khalifa-162031.jpg) center">
-                    <div class="news-title-wrapper">
-                        <a href="#">Tin mới cập nhật về công nghệ xịn xò nhất thế giới nè. Do tui dễ thương quá mà</a>
-                        <div><span style="color:white">Alex Holmes</span> - 4 hours ago</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
     </div>
 </div>
 
