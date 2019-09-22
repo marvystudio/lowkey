@@ -79,6 +79,7 @@
             </div>
 
         </div>-->
+        <form>
         <div class="row detail-text-divider mt-5">
             <div class="col-12">
                 <div class="detail-info detail-form">
@@ -109,12 +110,22 @@
             <div class="col-12 mb-4">
                 <h3>GÓI <b>SỬ DỤNG</b></h3>
                 <ul class="nav nav-tabs detail-tab">
+                <?php 
+				$qrpack="select * from `lk_pack` where `active`=1";
+				$rspack = mysqli_query($link,$qrpack);
+				while($pack=mysqli_fetch_assoc($rspack)){
+					
+				
+				?>
                     <li class="nav-item">
-                        <a class="nav-link active" data-toggle="tab" href="#business">Business</a>
+                        <input type="radio" checked name="pack" value="<?=$pack['id']?>"> <?=$pack['name']?>
                     </li>
-                    <li class="nav-item">
+                   <?php 
+				}
+				   ?>
+                   <!-- <li class="nav-item">
                         <a class="nav-link" data-toggle="tab" href="#marvy">Marvy Studio</a>
-                    </li>	
+                    </li>	-->
                 </ul>
             </div>
         </div>
@@ -205,7 +216,7 @@
 										} 
 										?>
                                         </span>
-                                        <input checked type="radio" name="radio<?= $r['id']?>"  value="<?= $r1['price']?>" required>
+                                        <input checked type="radio" name="radio<?= $r1['id']?>"  value="<?= $r1['price']?>" required>
                                         <span class="radio-checkmark"></span>
                                     </label>
                                 </div>
@@ -280,6 +291,9 @@
                         </div>
                     </div>
                 </div>
+                </div>
+                </div>
+                </form>
                 <div class="row detail-text-divider mt-5">
                     <div class="col-12">
                         <div class="detail-info detail-form">
@@ -378,7 +392,7 @@
                         </h6>
                     </div>
                     <div class="col-md-6 text-right">
-                        <button class="btn detail-btn detail-send">
+                        <button class="btn detail-btn detail-send" >
                             Tiếp
                         </button>
                     </div>
@@ -762,7 +776,7 @@ while($r=mysqli_fetch_assoc($kq)){
 	id_checkbox.push("<?=$r['id']?>");
 <?php	
 }
-$getid_radio="select `id` from `lk_eservice` where `active`=1 and `kind`!= 1";
+$getid_radio="select b.`id` as id from `lk_eservice` as a , `lk_detail_eservice` as b where a.`id`=b.`id_eservice` and a.`active`=1 and a.`kind`=2 and b.`active`=1";
 $kq2=mysqli_query($link,$getid_radio);
 while($r2=mysqli_fetch_assoc($kq2)){
 ?>
@@ -809,6 +823,7 @@ while($r2=mysqli_fetch_assoc($kq2)){
 		qty_radioF=qty_radio;
 		//set total
 		$("#pricetotal").html(total);
+		
 		
 	}
 	//record service
@@ -883,13 +898,15 @@ while($r2=mysqli_fetch_assoc($kq2)){
 				namecus: $("#namecus").val(),
 				mailcus: $("#mailcus").val(),
 				phonecus: $("#phonecus").val(),
-				comcus: $("#comcus").val()
+				comcus: $("#comcus").val(),
+				id_pack: 1,
+				deadline :"11/12/2020"
 				},
 
             }).done(function(data) {
 				
               	console.log(data);
-				 	alert(data);
+				 	
 				
             });
         }
