@@ -1,5 +1,5 @@
 <?php
-require_once("lib/connect.php");
+	require_once("lib/connect.php");
 	require_once("lib/xulytiengviet.php");
 	ob_start();
 	if(isset($_POST['namecus']))
@@ -38,10 +38,9 @@ require_once("lib/connect.php");
 	{
 		$deadline=$_POST['deadline'];
  	}
-	?>
-    <?php
+	
 	try{
-		//them user
+	//them user
 	$date=date("Y/m/d");
 	$sql="insert into `lk_user` values (null,'$phonecus','$comcus','$namecus','$mailcus','$date',0)";
 	mysqli_query($link,$sql);
@@ -58,8 +57,6 @@ require_once("lib/connect.php");
 	$qr1=mysqli_query($link,$getid_order);
 	$r1=mysqli_fetch_assoc($qr1);
 	$id_order=$r1['id'];
-	
-	
 	for ($i = 0; $i < count($used_check); $i++) {
 		$sql1="select * from `lk_detail_eservice` where `id`='{$used_check[$i]}'";
 		
@@ -69,8 +66,8 @@ require_once("lib/connect.php");
 		$addcheck="insert into `lk_detail_order` values (null,'$id_order','{$used_check[$i]}',1,0,'$price')";	
 		mysqli_query($link,$addcheck);
 	}
-		
-		for ($x = 0; $x < count($used_radio); $x++) {
+		if(isset($_POST['used_radio'])){
+			for ($x = 0; $x < count($used_radio); $x++) {
    		$sql2="select * from `lk_detail_eservice` where `id`='{$used_radio[$x]}'";
 		$qr3=mysqli_query($link,$sql2);
 		$r3=mysqli_fetch_assoc($qr3);
@@ -78,15 +75,10 @@ require_once("lib/connect.php");
 		$addradio="insert into `lk_detail_order` values (null,'{$id_order}','{$used_radio[$x]}','{$qty_radio[$x]}',0,'{$price1}')";	
 		mysqli_query($link,$addradio);
 	}
-
-	echo 1;
+			}
+	echo $id_user;
 	}
 	catch(Exception $e){
 		echo 2;
 	}
-	
-	
-	
-
-
 ?>

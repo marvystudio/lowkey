@@ -2,6 +2,7 @@
 	require_once("lib/connect.php");
 	require_once("lib/xulytiengviet.php");
 	ob_start();
+	
 ?>
 
 <!DOCTYPE html>
@@ -110,6 +111,7 @@
             <div class="col-12 mb-4">
                 <h3>GÓI <b>SỬ DỤNG</b></h3>
                 <ul class="nav nav-tabs detail-tab">
+                 <li class="nav-item">
                 <?php 
 				$qrpack="select * from `lk_pack` where `active`=1";
 				$rspack = mysqli_query($link,$qrpack);
@@ -117,15 +119,16 @@
 					
 				
 				?>
-                    <li class="nav-item">
+                   
                         <input type="radio" checked name="pack" value="<?=$pack['id']?>"> <?=$pack['name']?>
-                    </li>
+                    
                    <?php 
 				}
 				   ?>
                    <!-- <li class="nav-item">
                         <a class="nav-link" data-toggle="tab" href="#marvy">Marvy Studio</a>
                     </li>	-->
+                    </li>
                 </ul>
             </div>
         </div>
@@ -149,8 +152,7 @@
 							while($r=mysqli_fetch_assoc($rs)){
 								$id_eser=$r['id'];
 							// check box
-								if($r['kind']==1)
-								{
+								
 							?>
                             <div class="row mb-3">
                                 <div class="col-12">
@@ -189,189 +191,7 @@
                             <?php 
 								
 								}
-							//radio
-							if($r['kind']==2){
 							?>
-                            
-                           <div class="row mb-3">
-                                <div class="col-12">
-                                    <h4>
-                                        <?= $r['name'] ?>
-                                    </h4>
-                                </div>
-                                <?php 
-								$sql1="select * from `lk_detail_eservice` where `active`=1 and `id_eservice`='{$id_eser}'";
-								$rs1=mysqli_query($link,$sql1);
-								while($r1=mysqli_fetch_assoc($rs1)){
-									
-								?>
-                                
-                                <div class="col-md-3">
-                                    <label class="radio-container">
-                                        <?= $r1['name'] ?><br>
-                                        <span>
-										<?php if($r1['price']!=0)
-										{ 
-											echo $r1['price']."/".$r1['unit'];
-										} 
-										?>
-                                        </span>
-                                        <input checked type="radio" name="radio<?= $r['id']?>"  value="<?= $r1['price']?>" required>
-                                         
-                                        <span class="radio-checkmark">
-                                        </span>
-                                    </label>
-                                </div>
-                                 
-                             <?php   	
-							}
-							
-							?>
-                            <div class="col-12 mb-3">
-                                   <label for="quality<?= $r['id'] ?>">
-                                        Số Lượng <?= $r['name'] ?>
-                                    </label>
-                                    <input id="quality<?= $r['id'] ?>" type="number" min="1" class="form-control" value="1" required>
-                               </div>
-                            </div>
-                            <?php
-							}
-							//radio co text
-							if($r['kind']==3){
-							?>
-                            
-                           <div class="row mb-3">
-                                <div class="col-12">
-                                    <h4>
-                                        <?= $r['name'] ?>
-                                    </h4>
-                                </div>
-                                <?php 
-								$sql1="select * from `lk_detail_eservice` where `active`=1 and `id_eservice`='{$id_eser}'";
-								$rs1=mysqli_query($link,$sql1);
-								while($r1=mysqli_fetch_assoc($rs1)){
-									
-								?>
-                                
-                                <div class="col-md-3">
-                                    <label class="radio-container">
-                                        <?= $r1['name'] ?><br>
-                                        <span>
-										<?php if($r1['price']!=0)
-										{ 
-											echo $r1['price']."/".$r1['unit'];
-										} 
-										?>
-                                        </span>
-                                        <input checked type="radio" name="radio<?= $r['id']?>"  value="<?= $r1['price']?>" required>
-                                        <span class="radio-checkmark">
-                                        </span>
-                                    </label>
-                                </div>
-                             <?php   	
-							}
-							
-							?>
-                            <div class="col-12 mb-3">
-                                   <label for="quality<?= $r['id'] ?>">
-                                        Số Lượng <?= $r['name'] ?>
-                                    </label>
-                                    <input id="quality<?= $r['id'] ?>" type="number" min="1" class="form-control" value="1" required>
-                            </div>
-                           
-                            <div class="col-12 mb-3">
-                                  <label for="text<?= $r['id'] ?>">
-                                      Nội Dung <?= $r['name'] ?>
-                                    </label>
-                                    <textarea id="text<?= $r['id'] ?>"  class="form-control" rows="2"></textarea>
-                             </div>
-                            </div>
-                            <?php
-							}
-							}
-							?>
-                            
-                        </div>
-                    </div>
-                </div>
-                </div>
-                </div>
-                </form>
-                <div class="row detail-text-divider mt-5">
-                    <div class="col-12">
-                        <div class="detail-info detail-form">
-                            <div class="row">
-                                <div class="col-12 mb-4">
-                                    <h3>DỊCH VỤ <b>STUDIO</b></h3>
-                                    <h6>
-                                        Đồng hành với <a>marvy.studio</a>, với sự phát triển vượt bậc của công nghệ, chúng tôi sẽ nâng cấp website của bạn lên một tầm cao mới. Với ứng dụng của AR/XR, hình 360 và các mô hình 3D, website của bạn sẽ thật sự cuốn hút
-                                    </h6>
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col-md-3">
-                                    <label class="checkbox-container">
-                                        Hỗ trợ AR<br>
-                                        <span>2000k</span>
-                                        <input type="checkbox" checked="checked">
-                                        <span class="checkbox-checkmark"></span>
-                                    </label>
-                                </div>
-                                <div class="col-md-3">
-                                    <label class="checkbox-container">
-                                        Web XR<br>
-                                        <span>2000k</span>
-                                        <input type="checkbox">
-                                        <span class="checkbox-checkmark"></span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <h4>
-                                        Hình 360
-                                    </h4>
-                                </div>
-                                <div class="col-md-3">
-                                    <label class="radio-container">
-                                        Không cảm ơn<br>
-                                        <span>Free</span>
-                                        <input type="radio" name="multilang" checked="checked">
-                                        <span class="radio-checkmark"></span>
-                                    </label>
-                                </div>
-                                <div class="col-md-3">
-                                    <label class="radio-container">
-                                        Hình 360 vật kích thước nhỏ<br>
-                                        <span>500k/hình</span>
-                                        <input type="radio" name="multilang" checked="checked">
-                                        <span class="radio-checkmark"></span>
-                                    </label>
-                                </div>
-
-                                <div class="col-12 mb-3">
-                                    <label for="img-360">
-                                        Số lượng
-                                    </label>
-                                    <input id="img-360" type="number" min="1" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row detail-text-divider mt-5">
-                    <div class="col-12">
-                        <div class="detail-info detail-form">
-                            <div class="row">
-                                <div class="col-md-6 mb-4">
-                                    <h3>HẠN GIAO SẢN PHẨM</h3>
-                                </div>
-                                <div class="col-md-6 text-md-right">
-                                    <h2>
-                                        <b>7 Ngày</b>
-                                    </h2>
-                                </div>
-                            </div><hr>
                             <div class="row">
                                 <div class="col-md-6 mb-4">
                                     <h3><b>THANH TOÁN</b></h3>
@@ -395,7 +215,7 @@
                         </h6>
                     </div>
                     <div class="col-md-6 text-right">
-                        <button class="btn detail-btn detail-send" >
+                        <button class="btn detail-btn" type="button" onClick="save()">
                             Tiếp
                         </button>
                     </div>
@@ -755,7 +575,7 @@
                         </h6>
                     </div>
                     <div class="col-md-6 text-right">
-                        <button class="btn detail-btn detail-send">
+                        <button class="btn detail-btn detail-send" type="" onClick="save()">
                             Tiếp
                         </button>
                     </div>
@@ -772,7 +592,7 @@
 var id_checkbox = [];
 var id_radio = [];
 <?php
-$getid_check="select b.`id` as id from `lk_eservice` as a , `lk_detail_eservice` as b where a.`id`=b.`id_eservice` and a.`active`=1 and a.`kind`=1 and b.`active`=1";
+$getid_check="select b.`id` as id from `lk_eservice` as a , `lk_detail_eservice` as b where a.`id`=b.`id_eservice` and a.`active`=1 and b.`active`=1";
 $kq=mysqli_query($link,$getid_check);
 while($r=mysqli_fetch_assoc($kq)){
 ?>
@@ -870,32 +690,33 @@ while($r2=mysqli_fetch_assoc($kq2)){
 	$("input").change(function(){
  		calcu();
 	});
-	$("input[type='radio']:checked").click(function(){
-		var a =$(this).attr("name").match(/\d+/)[0];
-		$('#checkbox'+a).attr('checked', true);   
-		
-	});
-	$("input[type='radio']").change(function(){
- 		if($(this).val()==0)
-		{
-			var a =$(this).attr("name").match(/\d+/)[0];
-			$("#quality"+a).val(0);
-			$("#quality"+a).prop('disabled', true);
-			$("#text"+a).val("");
-			$("#text"+a).prop('disabled', true);
-			
-			
-		}
-		else
-		{
-			var a =$(this).attr("name").match(/\d+/)[0];
-			$("#quality"+a).val(1);
-			$("#quality"+a).prop('disabled', false);
-			$("#text"+a).val("");
-			$("#text"+a).prop('disabled', false);
-		}
-		calcu();
-	});
+	//$("input[type='radio']:checked").click(function(){
+//		var a =$(this).attr("name").match(/\d+/)[0];
+//		$('#checkbox'+a).attr('checked', true);   
+//		
+//	});
+	//$("input[type='radio']").change(function(){
+// 		if($(this).val()==0)
+//		{
+//			var a =$(this).attr("name").match(/\d+/)[0];
+//			$("#quality"+a).val(0);
+//			$("#quality"+a).prop('disabled', true);
+//			$("#text"+a).val("");
+//			$("#text"+a).prop('disabled', true);
+//			
+//			
+//		}
+//		else
+//		{
+//			var a =$(this).attr("name").match(/\d+/)[0];
+//			$("#quality"+a).val(1);
+//			$("#quality"+a).prop('disabled', false);
+//			$("#text"+a).val("");
+//			$("#text"+a).prop('disabled', false);
+//		}
+//		calcu();
+//	});
+	
 	 function check(array1,array2,array3) {
 		 	
             $.ajax({
@@ -909,15 +730,20 @@ while($r2=mysqli_fetch_assoc($kq2)){
 				mailcus: $("#mailcus").val(),
 				phonecus: $("#phonecus").val(),
 				comcus: $("#comcus").val(),
-				id_pack: 1,
+				id_pack: $("input[name=pack]:checked").val(),
 				deadline :"11/12/2020"
 				},
 
             }).done(function(data) {
 				
-              	console.log(data);
-				 	
+              	location.href = "/lowkey/checkout.php?iduser="+data;
+				
 				
             });
         }
+		function save(){
+			check(used_checkF,used_radioF,qty_radioF);
+			
+		}
+	
 </script>

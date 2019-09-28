@@ -310,9 +310,11 @@
                     <h2 class="card-text">
                        <?= $rs2['price']?> VND
                     </h2>
+                    <a href="detailcheck.php">
                     <button class="btn contact-btn mt-3 mb-3">
                         Đăng Ký
                     </button>
+                    </a>
                 </div>
                 <div class="card-footer text-center font-weight-bold">
                 <?php 
