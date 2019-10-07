@@ -162,6 +162,12 @@
                         <p>Extend Service</p>
                     </a>
                 </li>
+                 <li class="<?php if ($_GET['mod'] == "blog" ){echo "active";} ?>">
+                    <a href="?mod=blog">
+                        <i class="far fa-user"></i>
+                        <p>Blog</p>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

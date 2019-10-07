@@ -49,7 +49,8 @@
       <?=$i++?>
     </td>
     <td class="text-left">
-      <a style="color: black" href=""> <?=$re['id']?></a>
+ <?=$re['id']?>
+       <a style="color: black" href="?mod=order_detail&iduser=<?=$iduser?>&idorder=<?=$id?>"> <button class="btn btn-info">Kiểm tra</button></a>
     </td>
     <td align="center">
       <?=$nameuser['name']?>

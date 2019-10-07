@@ -27,5 +27,15 @@ require_once("../../lib/connect.php");
 	mysqli_query($link,"DELETE FROM `lk_eservice` WHERE `id`=$id_eservice  ");
 	echo 1;
 	}
+	if(isset($_POST['id_detail_eservice'])&& isset($_POST['xoaeser_detail'])){
+	$id_detail_eservice=$_POST['id_detail_eservice'];
+	mysqli_query($link,"DELETE FROM `lk_detail_eservice` WHERE `id`=$id_detail_eservice  ");
+	echo 1;
+	}
+	if(isset($_POST['id_blog'])&& isset($_POST['xoablog'])){
+	$id_blog=$_POST['id_blog'];
+	mysqli_query($link,"DELETE FROM `lk_blog` WHERE `id`=$id_blog  ");
+	echo 1;
+	}
 	
 ?>
